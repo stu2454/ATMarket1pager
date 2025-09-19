@@ -25,77 +25,82 @@ All filtering is restricted to:
 ## 📊 Sections
 
 ### 1. 💰 Expenditure
+**What this section tells us**  
+Expenditure is the most direct signal of the AT market’s scale and momentum. Tracking payments and committed supports allows us to see how much funding is flowing into AT compared to all NDIS supports, and whether budgets are being used efficiently (via utilisation).
+
 **KPIs**
 - AT Payments → `Market by Total` → `Payments`
 - AT Committed Supports → `Market by Total` → `Committed supports`
 - Utilisation → `Market by Total` → `Utilisation`
 
 **Plots**
-- **Trend of AT Payments** → `Market by Total` → time series of `Payments`
-- **Top 10 AT Support Items by Spend** → **Simulated data** (wheelchairs, AAC devices, hearing aids, etc.)
+- **Trend of AT Payments (Area Chart)** → Shows changes in AT spend across reporting periods. Driven by *Market by Total → Payments*.
+- **Top 10 AT Support Items by Spend** → **Simulated** (wheelchairs, AAC devices, hearing aids, etc.).
 
-📌 *To populate this properly, NDIA would need access to claim-level data by **support item code**.*
+📌 *Future needs: claim-level data by support item code.*
 
 ---
 
 ### 2. 👥 Participants
+**What this section tells us**  
+Participant data shows **who** is driving AT demand, how complex their needs are, and how usage patterns differ by spend, function, and disability.
+
 **KPIs**
 - Active AT Participants → `ActPrtpnt by Total` → `Active participants`
-- Complex AT Users → **Simulated (30%)**
+- Complex AT Users → **Simulated (30%)**. Refers to participants needing multiple/high-cost devices.
 - Median AT Spend → **Simulated ($3.2K)**
 
 **Plots**
-- **Complexity (Donut)** → **Simulated (Simple vs Complex users)**
-- **Spend Intensity (Bar)** → **Simulated** (Low < $1K, Moderate $1K–10K, High > $10K)
-- **Functional Domains (Bar)** → **Simulated** (Mobility, Communication, Vision/Hearing, etc.)
-- **Primary Disability (Lollipop)** → **Simulated** (Cerebral palsy, Autism, MS, etc.)
+- **Complexity (Donut)** → Simple vs Complex users (simulated).  
+- **Spend Intensity (Bar)** → Simulated split: Low (<$1K), Moderate ($1K–10K), High (>$10K).  
+- **Functional Domains (Bar)** → Simulated split across Mobility, Communication, Self-care, Vision/Hearing, Cognition.  
+- **Primary Disability (Lollipop)** → Simulated distribution across Cerebral palsy, Autism, MS, etc.
 
-📌 *To replace simulated data, NDIA would need:*
-- Breakdown of AT supports by **participant complexity tiers** (simple vs multi-device).
-- AT spend distribution across **functional impairment domains**.
-- AT use by **primary disability type**.
+📌 *Future needs: plan-level data on AT complexity tiers, spend by functional domains, and disability group breakdown.*
 
 ---
 
 ### 3. 📈 Market Dynamics
-**KPIs**
-- Median Delivery Time → **Simulated (44 days)**
-- % Repairs <14 Days → **Simulated (72%)**
-- Provider Churn → **Simulated (4% this quarter)**
-- Innovation Uptake → **Simulated (3.5% of AT spend)**
+**What this section tells us**  
+This section looks at **system performance** — not just how much is spent, but how well the market functions in meeting participant needs.
+
+**KPIs (all simulated currently)**
+- Median Delivery Time (44 days) → access speed.  
+- % Repairs <14 Days (72%) → continuity measure.  
+- Provider Churn (4%) → market stability.  
+- Innovation Uptake (3.5%) → share of spend using flexible/subscription codes or digital AT.  
 
 **Plots**
-- **Innovation Uptake Trend (Line)** → **Simulated (% spend using flexible/subscription codes)**
-- **Regional Delivery Times (Bar)** → **Simulated (Metro = 38 days, Regional = 46, Remote = 54)**
-- **Market Concentration (Donut)** → **Simulated (Top 5 providers = 45% of payments)**
+- **Innovation Uptake Trend (Line)** → Simulated % spend growth via innovative pathways.  
+- **Regional Delivery Times (Bar)** → Simulated averages: Metro = 38, Regional = 46, Remote = 54.  
+- **Market Concentration (Donut)** → Simulated: top 5 providers = 45% of spend.
 
-📌 *To replace simulated data, NDIA would need:*
-- Data from provider claims linked to **delivery and repair turnaround times**.
-- **Churn analysis** of registered AT providers (entries/exits per quarter).
-- Claims tagged to **flexible/subscription codes**.
-- Market concentration analysis based on **provider-level payments**.
+📌 *Future needs: turnaround times in claims, provider churn tracking, claims flagged to flexible/subscription codes, HHI calculations.*
 
 ---
 
 ### 4. 🏢 Providers
+**What this section tells us**  
+Providers are the supply side of the AT market. Monitoring scope, reach, and distribution shows market resilience and thin market risks.
+
 **KPIs**
 - Active AT Providers → `Provider by Total` → `Active provider`
-- Participants per Provider → **Derived** (`participants ÷ providers`)
+- Participants per Provider → Derived: participants ÷ providers  
 - Top 5 Provider Share → **Simulated (45%)**
 
 **Plots**
-- **Provider Reach Distribution (Histogram)** → **Simulated (# participants served ranges)**
-- **Scope of Supply (Donut)** → **Simulated (Multi-line vs Niche providers)**
-- **Regional Coverage (Bar)** → **Simulated (Metro 70%, Regional 25%, Remote 5%)**
+- **Provider Reach Distribution (Histogram)** → Simulated buckets of participants served.  
+- **Scope of Supply (Donut)** → Simulated split: Multi-line vs Niche providers.  
+- **Regional Coverage (Bar)** → Simulated split: Metro 70%, Regional 25%, Remote 5%.
 
-📌 *To replace simulated data, NDIA would need:*
-- Participant-to-provider matching (claims data by provider).
-- Provider registration information by **registration groups / support items**.
-- Provider activity by **region**.
+📌 *Future needs: provider-claim linkage, registration groups vs supply, regional mapping of activity.*
 
 ---
 
 ### 5. 📊 Key Statistics Snapshot
+**What this section tells us**  
+A quick **executive summary card**, pulling key data points into one glance.
+
 **KPIs**
 - Total AT Spend → `Market by Total` → `Payments`
 - Participants with AT → `ActPrtpnt by Total` → `Active participants`
@@ -103,6 +108,39 @@ All filtering is restricted to:
 - Utilisation → `Market by Total` → `Utilisation`
 - Avg Committed Support → `ActPrtpnt by Total` → `Average committed support`
 - Innovation Uptake → **Simulated (3.5%)**
+
+---
+
+## 📋 KPI & Plot Mapping
+
+| Section        | KPI / Plot                         | Source                               | Real / Simulated | Data Needs |
+|----------------|-------------------------------------|--------------------------------------|------------------|------------|
+| Expenditure    | AT Payments                        | Market by Total → Payments           | Real             | – |
+|                | AT Committed Supports              | Market by Total → Committed supports | Real             | – |
+|                | Utilisation                        | Market by Total → Utilisation        | Real             | – |
+|                | Trend of AT Payments (area)        | Market by Total → Payments           | Real             | – |
+|                | Top 10 AT Items                    | –                                    | Simulated        | Item-level claim data |
+| Participants   | Active AT Participants             | ActPrtpnt by Total → Active participants | Real        | – |
+|                | Complex AT Users                   | –                                    | Simulated        | Complexity tiers |
+|                | Median AT Spend                    | –                                    | Simulated        | Distributional data |
+|                | Complexity (Donut)                 | –                                    | Simulated        | Complexity tiers |
+|                | Spend Intensity (Bar)              | –                                    | Simulated        | Plan-level spend |
+|                | Functional Domains (Bar)           | –                                    | Simulated        | Assessment-linked AT |
+|                | Primary Disability (Lollipop)      | –                                    | Simulated        | Disability-linked AT |
+| Market Dynamics| Median Delivery Time               | –                                    | Simulated        | Delivery times data |
+|                | % Repairs <14 Days                 | –                                    | Simulated        | Repair turnaround |
+|                | Provider Churn                     | –                                    | Simulated        | Provider entry/exit |
+|                | Innovation Uptake                  | –                                    | Simulated        | Flexible/subscription claims |
+|                | Innovation Uptake Trend (Line)     | –                                    | Simulated        | Flexible claims trend |
+|                | Regional Delivery Times (Bar)      | –                                    | Simulated        | Regional service data |
+|                | Market Concentration (Donut)       | –                                    | Simulated        | Provider-level payments |
+| Providers      | Active AT Providers                | Provider by Total → Active provider  | Real             | – |
+|                | Participants per Provider          | Derived                              | Real             | – |
+|                | Top 5 Provider Share               | –                                    | Simulated        | Provider-level payments |
+|                | Provider Reach Distribution        | –                                    | Simulated        | Participants per provider |
+|                | Scope of Supply (Donut)            | –                                    | Simulated        | Provider registration/supply |
+|                | Regional Coverage (Bar)            | –                                    | Simulated        | Regional activity |
+| Snapshot       | All above key figures              | Mixed                                | Mixed            | Replace simulated with NDIA data |
 
 ---
 
@@ -148,9 +186,9 @@ Use a `Dockerfile` for containerised deployment (see docs).
 ---
 
 ## 📝 Notes
-- **Colour themes per section**:
-  - Expenditure = Blue
-  - Participants = Green
-  - Market Dynamics = Orange
-  - Providers = Purple
+- **Colour themes per section**:  
+  - Expenditure = Blue  
+  - Participants = Green  
+  - Market Dynamics = Orange  
+  - Providers = Purple  
 - This improves quick visual separation across the dashboard.
