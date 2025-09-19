@@ -1,0 +1,5 @@
+streamlit==1.36.0
+pandas==2.2.2
+altair==5.2.0
+openpyxl==3.1.5   # required for Excel data
+plotly==5.16.1
