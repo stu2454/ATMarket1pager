@@ -6,6 +6,8 @@ The data for this dashboard is drawn directly from the **NDIS Data Explorer** ([
 Using the **Download Manager**, filters were applied to include **all four quarters of 2024–25 (Q1–Q4)** and to restrict the Support Category to **Capital – Assistive Technology**.  
 This produces a downloadable `.xlsx` dataset (attached), which contains multiple sheets. These sheets form the structured basis from which meaningful indicators are extracted to create the dashboard “1-pager”. Each KPI and plot described in this guide is mapped back to the relevant sheet and variable from this file.
 
+See Appendix for Data Dictionary
+
 ---
 
 ## 1. 💰 Expenditure
@@ -118,6 +120,98 @@ A quick executive summary box, capturing essential signals across expenditure, p
 - **Utilisation** → From _Market by Total → Utilisation_.
 - **Avg Committed Support** → From _ActPrtpnt by Total → Average committed support_.
 - **Innovation Uptake** → Simulated (3.5%).
+
+---
+
+# 📑 Appendix: Data Dictionary – NDIS Data Explorer (Capital – Assistive Technology)
+
+This Excel file was downloaded from the NDIS Data Explorer using the Download Manager. Filters: **Q1–Q4 2024/25** and **Support Category = Capital – Assistive Technology**.
+
+---
+
+## 👥 Participant-Focused Sheets
+
+### **ActPrtpnt by Total**
+
+- **Period** (quarter/year)
+- **State/Territory**
+- **Support Category**
+- **Active participants**
+- **Average committed support** (per participant)
+- **Average payments** (per participant)
+
+### **ActPrtpnt by Age Group**
+
+- Dimensions: _Age Group_
+- Same metrics as above.
+
+### **ActPrtpnt by Primary Disability**
+
+- Dimensions: _Primary Disability_
+- Same metrics as above.
+
+### **ActPrtpnt by Level of Function**
+
+- Dimensions: _Level of Function_ (functional status bands)
+- Same metrics as above.
+
+### **ActPrtpnt by Remoteness Rating**
+
+- Dimensions: _Remoteness Rating_ (Metro, Regional, Remote, Very Remote)
+- Same metrics as above.
+
+### **ActPrtpnt by FNP status**
+
+- Dimensions: _First Nations Peoples status_ (Yes/No)
+- Same metrics as above.
+
+### **ActPrtpnt by CALD status**
+
+- Dimensions: _CALD status_ (Yes/No)
+- Same metrics as above.
+
+### **ActPrtpnt by SIL or SDA**
+
+- Dimensions: _Supported Independent Living (SIL) or Specialist Disability Accommodation (SDA)_
+- Same metrics as above.
+
+---
+
+## 💰 Market-Focused Sheets
+
+### **Market by Total**
+
+- **Period**
+- **State/Territory**
+- **Support Category**
+- **Market concentration** (indicator of spend distribution across providers)
+- **Payments** (total spend)
+- **Committed supports** (total allocated)
+- **Utilisation** (payments ÷ committed)
+
+### **Market by Age Group / Primary Disability / Level of Function / Remoteness / FNP / CALD / SIL or SDA**
+
+- Each segmented by the named attribute.
+- Metrics: _Market concentration, Payments, Committed supports, Utilisation_.
+
+---
+
+## 🏢 Provider-Focused Sheets
+
+### **Provider by Total**
+
+- **Period**
+- **State/Territory**
+- **Support Category**
+- **Active provider** (count)
+- **Participants per provider**
+- **Provider growth** (% entering market)
+- **Provider shrink** (% exiting market)
+
+### **Provider by Age Group / Primary Disability / Level of Function / Remoteness / FNP / CALD / SIL or SDA**
+
+- Each segmented by the named attribute.
+- Metrics: _Active provider, Participants per provider, Provider growth, Provider shrink_.
 
 ---
 
