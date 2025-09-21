@@ -8,7 +8,7 @@ This produces a downloadable `.xlsx` dataset (attached), which contains multiple
 
 See Appendix for Data Dictionary
 
----
+## ⚠️ **Note:** This dashboard is developed purely for **exploratory purposes**. It is not an official reporting tool, and simulated values are used in several places where detailed data is not available. Any insights should be treated as indicative only.
 
 ## 1. 💰 Expenditure
 
