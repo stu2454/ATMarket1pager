@@ -1,5 +1,13 @@
 # 📖 Narrative Guide to Dashboard Sections
 
+## 🔍 Data Source
+
+The data for this dashboard is drawn directly from the **NDIS Data Explorer** ([link](https://dataresearch.ndis.gov.au/explore-data)).  
+Using the **Download Manager**, filters were applied to include **all four quarters of 2024–25 (Q1–Q4)** and to restrict the Support Category to **Capital – Assistive Technology**.  
+This produces a downloadable `.xlsx` dataset (attached), which contains multiple sheets. These sheets form the structured basis from which meaningful indicators are extracted to create the dashboard “1-pager”. Each KPI and plot described in this guide is mapped back to the relevant sheet and variable from this file.
+
+---
+
 ## 1. 💰 Expenditure
 
 **What this section tells us:**  
